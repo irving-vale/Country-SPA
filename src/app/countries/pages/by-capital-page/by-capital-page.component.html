@@ -1,0 +1,19 @@
+<h2>Por Capital</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- SearchBox -->
+    <shared-search-Box
+      (oneValue)="searchByCapital($event)"
+      placeholder="Buscar por capital"
+    ></shared-search-Box>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <hr />
+      <countries-table [countries]="countries"></countries-table>
+    </div>
+  </div>
+</div>
