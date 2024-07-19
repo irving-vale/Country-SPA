@@ -12,15 +12,9 @@ export class ByRegionPageComponent {
 
   public region: Country[] = [];
 
-
-searchByRegion(term: string): void {
-    this.countriesService.searchRegion(term)
-    .subscribe((response=>{
-      console.log(response);
+  searchByRegion(term: string): void {
+    this.countriesService.searchRegion(term).subscribe((response) => {
       this.region = response;
-    }))
-
+    });
   }
-
-
 }
