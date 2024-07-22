@@ -6,6 +6,7 @@
     <!-- SearchBox -->
     <shared-search-Box
       (oneValue)="searchByCapital($event)"
+      [inputValueStorage]="initialValue"
       placeholder="Buscar por capital"
     ></shared-search-Box>
   </div>
