@@ -11,6 +11,7 @@
   <div class="col">
     <hr>
     <!-- tabla -->
+    <shared-loading-spiner *ngIf="isLoading"></shared-loading-spiner>
     <countries-table [countries]="countries"></countries-table>
 
   </div>

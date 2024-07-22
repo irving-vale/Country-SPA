@@ -7,11 +7,16 @@
     <shared-search-Box (oneValue)="searchByRegion($event)"> </shared-search-Box>
   </div>
 
+  <div *ngIf="errorMessage" class="col-12">
+    <p class="text-danger"> {{errorMessage}}</p>
+  </div>
+
   <div class="row">
     <div class="col">
       <hr />
       <!-- tabla -->
-      <countries-table [countries]="region"></countries-table>
+      <shared-loading-spiner *ngIf="isLoading"></shared-loading-spiner>
+      <countries-table [countries]="region" *ngIf="!errorMessage"></countries-table>
     </div>
   </div>
 </div>
